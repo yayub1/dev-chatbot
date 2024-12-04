@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Document</title> <!-- Title of the document -->
+    <link rel="stylesheet" href="cs.css"> <!-- Link to the CSS stylesheet -->
+    
+<body>
+    <div id="navbar"> <!-- Navigation bar containing buttons -->
+        <button id="signup_contetnt" class="btnsin">Sign Up</button> <!-- Button to open sign-up form -->
+        <button id="login_content" class="btnsin">Log In</button> <!-- Button to open login form -->
+    </div>
+   
+    <div id="login-box"> <!-- Main container for login and sign-up forms -->
+        <div id="left"> <!-- Left side for sign-up form -->
+            <h1>Sign Up</h1> <!-- Title for sign-up section -->
+            <input type="text" id="username" name="username" placeholder="Username"> <!-- Input for username -->
+            <input type="text" id="email" name="email" placeholder="E-mail"> <!-- Input for email -->
+            <input type="password" id="password" name="password" placeholder="Password"> <!-- Input for password -->
+            <input type="submit" id="sighUp" name="signup_submit" value="Sign Up"> <!-- Sign-up button --> <br>
+            <button id="btn_haveaccount">HAVE AN ACCOUNT</button>
+
+            <h1>or</h1>
+            <div class=""> <!-- Right side for social sign-in options -->
+                <h1 class="loginwith">Sign in with Social Network</h1> <!-- Title for social login section -->
+                <button id="googleLogin">Login with Google</button>
+                <button id="facebookLogin">Login with Facebook</button>
+                <button id="twitterLogin">Login with Twitter</button>
+     <!-- Google login button -->
+            </div>
+        </div>
+        
+        <div id="loginbox"> <!-- Right side for login form -->
+            <button id="back_signup"><span><</span></button>
+            <h1>Login with Email and Password</h1> <!-- Title for login section -->
+            <input type="text" id="email2" name="email" placeholder="E-mail" required> <!-- Input for email (login) -->
+            <input type="password" id="password2" name="password" placeholder="Password" required> <!-- Input for password (login) -->
+            <br>
+            
+            <input type="submit" id="login" name="login" value="Log In"> <!-- Login button --> <br>
+            <button id="forget">forgot passwared</button>
+          
+    </div>
+    <!-- Separator for sign-in options -->
+ 
+      
+    </div>
+        <div id="forgetbox">
+            <button id="back_login"><span><</span></button>
+        <input type="email" id="resetEmail" placeholder="Enter your email for reset" required><br>
+        <a href="#" id="reset" style="color: antiquewhite;">forgot passwared</a>
+            
+        </div>
+    <script src="display.js"></script> <!-- Link to the JavaScript file for displaying forms -->
+    <script src="../back/login.js" type="module"></script> <!-- Link to the JavaScript file for login functionality -->
+    <script src="../back/index.js" type="module"></script>
+</head>
+</body>
+</html>

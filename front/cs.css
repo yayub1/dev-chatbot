@@ -1,0 +1,517 @@
+/* Reset and Basic Styles */
+html, body {
+    height: 100%; /* Ensure html and body take full height */
+    margin: 0; /* Remove default margin */}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('../robot.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#login-box {
+    width: 80%; /* Full width for better responsiveness */
+    max-width: 600px; /* Limit max width */
+    height: auto; /* Change to auto for better responsiveness */
+    display: flex;
+    flex-direction: row; /* Default to row layout */
+    margin-top: -150px; /* Set margin-top to 50px */
+    padding: 20px; /* Add padding for better spacing */
+    justify-content: center; /* Center the content horizontally */
+    position: relative; /* Use relative positioning */
+}
+/* Login Box */
+#loginbox {
+    width: 100%; /* Full width for login box */
+    max-width: 300px; /* Limit max width */
+    height: auto; /* Change to auto for better responsiveness */
+    border: 1px solid rgb(228, 228, 228);
+    margin: 50px auto; /* Set margin-top to 50px and center horizontally */
+    color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent background */
+    display: none; /* Initially hidden */
+}
+/* Button Styles */
+#btn_haveaccount {
+    margin-top: 10px;
+    width: 70%; /* Default width */
+    height: 40px;
+    font-size: 30px;
+    background-color: #4a90e2; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transition effects */
+    animation: button-fade-in 0.5s ease forwards; /* Fade-in effect */
+}
+/* Button Hover and Active Effects */
+#btn_haveaccount:hover {
+    background-color: #357ae8; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adding shadow on hover */
+}
+#btn_haveaccount:active {
+    transform: translateY(1px); /* Slight push down effect */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow on active */
+}
+/* Keyframe Animation for Button */
+@keyframes button-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Back Signup Button Styles */
+#back_login {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: calc(-280px + 5vw); /* Adjust position based on viewport width */
+    top: -20px;
+    left: -200px;
+    background-color: #4a90e2; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Make it circular */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transition effects */
+    animation: button-fade-in 0.5s ease forwards; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+}
+#back_login:hover {
+    background-color: #357ABD; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slightly lift the button */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+#back_signup {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: -145px;
+    top: -20px;
+    background-color: #4a90e2; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Make it circular */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transition effects */
+    animation: button-fade-in 0.5s ease forwards; /* Fade-in effect */
+}
+/* Back Signup Button Hover and Active Effects */
+#back_signup:hover {
+    background-color: #357ae8; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adding shadow on hover */
+}
+#back_signup:active {
+    transform: scale(0.95); /* Slightly shrink on active */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow on active */
+}
+/* Left Side of the Login Box */
+#left {
+    flex: 1; /* Allow it to grow and shrink */
+    height: auto; /* Change to auto for better responsiveness */
+    margin: 10px; /* Adjust margin for better spacing */
+    color: wheat;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Enhanced shadow for depth */
+    display: block; /* Show left side */
+    padding: 20px; /* Add padding for better spacing */
+    background: linear-gradient(135deg, rgba(34, 34, 34 , 0.9), rgba(0, 0, 0, 0.7)); /* Gradient background */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+#left:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+/* Right Side of the Login Box */
+.right {
+    flex: 1; /* Allow it to grow and shrink */
+    height: auto; /* Change to auto for better responsiveness */
+    border: 1px solid black;
+    margin: 10px; /* Adjust margin for better spacing */
+    display: block; /* Show right side */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: rgba(34, 34, 34, 0.8); /* Semi-transparent background */
+}
+/* Navigation Bar */
+#navbar {
+    width: 98%;
+    height: 50px;
+    border: 1px solid rgb(220, 217, 217);
+    position: absolute;
+    top: 5px;
+    border-radius: 10px;
+    background-color: rgba(173, 216, 230, 0.9); /* Light blue with transparency */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+/* Button Styles for Sign In */
+.btnsin {
+    margin: 0; /* Remove margin */
+    background-color: #4a90e2; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for better button size */
+    font-size: 16px; /* Consistent font size */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+.btnsin:hover {
+    background-color: #357ae8; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+/* Social Sign-In Buttons */
+#facebookLogin,
+#twitterLogin,
+#googleLogin {
+    width: 100%; /* Full width for buttons */
+    height: 40px; /* Increased height for better usability */
+    margin-top: 5px;
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #4a90e2; /* Button color */
+    color: white; /* Text color */
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+#facebookLogin:hover,
+#twitterLogin:hover,
+#googleLogin:hover {
+    background-color: #357ae8; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+/* Input Fields */
+#username,
+#email,
+#password,
+#loginbox #email2,
+#loginbox #password2 {
+    width: 80%; /* Full width for input fields */
+    height: 30px;
+    margin-top: 5px;
+    padding: 5px; /* Add padding for better input experience */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px; /* Rounded corners */
+    position: relative;
+    top: -20px;
+}
+/* Separator for Social Login */
+.or {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    position: relative;
+    top: 40%;
+    display: none; /* Initially hidden */
+}
+/* Login Box */
+/* Login Button */
+#loginbox #login {
+    width: 100%; /* Full width for login button */
+    margin-top: 20px;
+    height: 40px; /* Increased height for better usability */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #28a745; /* Green button color */
+    color: white; /* Text color */
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+#loginbox #login:hover {
+    background-color: #218838; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+/* Sign Up Button */
+#sighUp {
+    width: 50%; /* Width of the button */
+    height: 40px; /* Increased height for better usability */
+    background: linear-gradient(135deg, #4a90e2, #357ae8); /* Gradient background */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding for better button size */
+    font-size: 16px; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+#sighUp:hover {
+    background: linear-gradient(135deg, #357ae8, #4a90e2); /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+/* Base styles for the forget box */
+/* Base styles for the forget box */
+#forgetbox {
+    max-width: 600px; /* Maximum width for larger screens */
+    width: 90%; /* Responsive width */
+    height: auto; /* Height adjusts based on content */
+    border: 1px solid #ccc; /* Border style */
+    display: none; /* Initially hidden */
+    position: relative; /* Positioning context */
+    margin: -20px auto; /* Center the box with margin */
+    padding: 20px; /* Padding for inner spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background color */
+    margin-left: -150px;
+}
+/* Styles for the reset email input */
+#resetEmail {
+    width: 100%; /* Full width for better responsiveness */
+    height: 50px; /* Fixed height */
+    margin-top: 20px; /* Space above the input */
+    margin-left: -10px;
+    padding: 10px; /* Padding for better usability */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+/* Focus effect for the input */
+#resetEmail:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+/* Styles for the reset link (acting as a button) */
+#reset {
+    display: inline-block; /* Make the link behave like a button */
+    width: 100%; /* Full width */
+    height: 50px; /* Fixed height */
+    margin-top: 10px; /* Space above the link */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    line-height: 50px; /* Vertically center text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color and transform */
+}
+/* Hover effect for the reset link */
+#reset:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+#forget {
+    padding: 10px 20px; /* Padding for top/bottom and left/right */
+    background-color: #4a90e2; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transition effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    margin-top: 10px;
+}
+/* Hover effect */
+#forget:hover {
+    background-color: #357ABD; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slightly lift the button */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+/* Focus effect */
+#forget:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.5); /* Outline effect when focused */
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #forget {
+        font-size: 0.9rem; /* Smaller font size for medium devices */
+        padding: 8px 16px; /* Adjust padding */
+    }
+}
+@media (max-width: 480px) {
+    #forget {
+        font-size: 0.8rem; /* Smaller font size for small devices */
+        padding: 6px 12px; /* Adjust padding */
+    }
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #forgetbox {
+        padding: 15px; /* Adjust padding for smaller screens */
+        margin-left: -300px;
+        margin-top: 100px;
+    }
+
+    #resetEmail {
+        height: 45px; /* Slightly smaller height */
+        margin-left: -10px;
+    }
+
+    #reset {
+        height: 45px; /* Slightly smaller height */
+    }
+}
+
+@media (max-width: 480px) {
+    #forgetbox {
+        width: 95%; /* Slightly wider on very small screens */
+    }
+
+    #resetEmail {
+        height: 40px; /* Smaller height for mobile */
+    }
+
+    #reset {
+        height: 40px; /* Smaller height for mobile */
+    }
+}
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    #back_signup {
+        left: -150px; /* Adjust position for smaller screens */
+        top: -10px; /* Adjust position for smaller screens */
+        width: 40px; /* Slightly smaller size */
+        height: 40px; /* Maintain circular shape */
+    }
+    #btn_haveaccount {
+        width: 90%; /* Full width on smaller screens */
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+    #login-box {
+        /* Ensure margin-top is consistent */
+        flex-direction: column; /* Stack left and right sections */
+        width: 90%; /* Full width on smaller screens */
+        margin: 0; /* Remove margin */
+        position: relative;
+        top: 100px;
+    }
+
+    #left, .right {
+        width: 100%; /* Full width for both sections */
+        margin: 10px 0; /* Adjust margin for better spacing */
+        transform: scale(1); /* Reset scaling */
+        display: none;
+    }
+
+    #navbar {
+        width: 100%; /* Full width for navbar on smaller screens */
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+
+    .btnsin {
+        padding: 10px 15px; /* Adjust padding for smaller buttons */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+    #left {
+        display: block;
+    }
+    #loginbox {
+        margin-top: 50px; /* Ensure margin-top is consistent */
+    }
+}
+@media screen and (max-width: 420px) {
+    #back_signup {
+        left: -120px; /* Further adjust position for very small screens */
+        top: 0; /* Center vertically */
+        width: 35px; /* Smaller size */
+        height: 35px; /* Maintain circular shape */
+    }
+    #btn_haveaccount {
+        width: 90%; /* Full width on very small screens */
+        font-size: 20px; /* Further adjust font size */
+    }
+    #loginbox {
+        margin-top: -50px; /* Ensure margin-top is consistent */
+    }
+    .right {
+        display: none;
+    }
+    #login-box {
+        margin-top: 50px; /* Ensure margin-top is consistent */
+    }
+ 
+
+    #left {
+        width: 90%; /* Full width for left section */
+        height: auto; /* Auto height for better fit */
+        margin-top: 20px; /* Adjust margin */
+        display: block;
+    }
+
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto; /* Ensure body takes full height */
+    }
+    #navbar {
+        height: 50px; /* Adjust height for very small screens */
+    }
+    
+    .btnsin {
+        padding: 8px 12px; /* Further adjust padding for small buttons */
+        font-size: 12px; /* Smaller font size for small screens */
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    #login-box {
+        justify-content: center; /* Center the login box */
+        flex-direction: row; /* Keep row layout */
+        margin-top: 100px;
+       
+       
+    }
+
+    #left {
+        display: block; /* Show left side */
+        position: relative;
+        top: 10px;
+    }
+
+    .right {
+        display: none; /* Show right side */
+    }
+    body{
+        height: auto;
+    }
+}
+@media screen and (min-width: 1001px) {
+    #login-box {
+        position: relative;
+        top: 100px;/* Adjust this value as needed to move it down */
+    }
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #back_login {
+        left: calc(-200px + 5vw); /* Adjust position for smaller screens */
+    }
+}
+/* Media query for extra small screens */
+@media (max-width: 480px) {
+    #back_login {
+        left: calc(-140px + 5vw); /* Adjust position for very small screens */
+    }}
+@media (min-width: 780px) {
+    #back_login {
+        left: -280px; /* Keep original position */
+        /* You can adjust other properties here if needed */
+    }
+}
+/* Keyframes for fade-in animation */
+@keyframes button-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
